@@ -1941,10 +1941,28 @@ function initCardReveal() {
     cards.forEach(card => observer.observe(card));
 }
 
+// Initialize Lenis Smooth Scroll
+function initLenis() {
+    if (typeof Lenis === 'undefined') return;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const lenis = new Lenis({
+        duration: 1.15,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smoothWheel: true
+    });
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+    window.swiftLenis = lenis;
+}
+
 // Initialize Settings, Icons & Deep-Link Hash Routing
 document.addEventListener('DOMContentLoaded', () => {
     loadSettings();
     initCardReveal();
+    initLenis();
     lucide.createIcons();
     const hash = window.location.hash.replace('#', '');
     if (hash && TOOL_META[hash]) {
