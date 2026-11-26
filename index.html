@@ -740,26 +740,30 @@
     <!-- Footer -->
     <footer class="bg-surface border-t-[3px] border-ink mt-auto">
         <div class="container py-12">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-10 border-b-2 border-dashed border-ink/20">
+            <div class="footer-grid-3 pb-10 border-b-2 border-dashed border-ink/20">
 
                 <!-- Brand Col -->
-                <div class="lg:col-span-1 space-y-4">
+                <div class="space-y-4">
                     <a href="#" onclick="closeTool(); return false;" class="brand">
                         <div class="brand-icon-box">
                             <i data-lucide="files" class="w-4 h-4"></i>
                         </div>
-                        <span>SwiftDocs</span>
-                        <span class="brand-badge">v1.0</span>
+                        <span>SwiftDocs <span class="font-medium text-muted text-sm">• Office Suite</span></span>
                     </a>
 
-                    <p class="text-xs font-medium text-muted leading-relaxed">
-                        Suite pengolah dokumen PDF, Office, & Gambar 100% client-side berbasis browser. Cepat, gratis, dan menjaga privasi file Anda tanpa upload server.
+                    <p class="text-xs font-medium text-muted leading-relaxed max-w-sm">
+                        Suite pengolah dokumen PDF, Office, &amp; Gambar 100% client-side berbasis browser. Kelola berkas kerja secara instan tanpa install aplikasi dan tanpa upload server.
                     </p>
 
                     <div class="flex flex-wrap gap-2">
-                        <span class="sticker-badge yellow text-[10px] py-0.5 px-2.5">Tanpa Iklan</span>
-                        <span class="sticker-badge sage text-[10px] py-0.5 px-2.5">100% Gratis</span>
-                        <span class="sticker-badge white text-[10px] py-0.5 px-2.5">Client-Side</span>
+                        <span class="sticker-badge sage text-[10px] py-1 px-3">Tanpa Iklan</span>
+                        <span class="sticker-badge yellow text-[10px] py-1 px-3">Tools Gratis</span>
+                        <span class="sticker-badge white text-[10px] py-1 px-3">100% Client-Side</span>
+                    </div>
+
+                    <div class="inline-flex items-center gap-2 text-xs font-bold text-ink">
+                        <span class="w-5 h-5 rounded-full bg-mangaYellow border border-ink inline-flex items-center justify-center text-[10px] font-black text-onAccent">P</span>
+                        <span>Crafted by <strong>Pradipta</strong></span>
                     </div>
 
                     <div class="footer-feedback-card">
@@ -774,42 +778,61 @@
                     </div>
                 </div>
 
-                <!-- Tools PDF Col -->
+                <!-- Semua Tools Col -->
                 <div>
-                    <h4 class="text-xs font-black uppercase tracking-wider text-ink mb-3.5">Tools PDF & Office</h4>
-                    <ul class="space-y-2 text-xs font-bold text-muted">
+                    <h4 class="text-xs font-black text-ink mb-3.5">Semua Tools</h4>
+                    <ul class="space-y-2 text-xs font-semibold text-muted">
                         <li><a href="#merge" onclick="openTool('merge'); return false;" class="hover:text-ink hover:underline">Gabung PDF (Merge)</a></li>
                         <li><a href="#split" onclick="openTool('split'); return false;" class="hover:text-ink hover:underline">Pisah PDF (Split)</a></li>
                         <li><a href="#compress" onclick="openTool('compress'); return false;" class="hover:text-ink hover:underline">Kompres PDF</a></li>
-                        <li><a href="#organize" onclick="openTool('organize'); return false;" class="hover:text-ink hover:underline">Putar & Hapus Halaman</a></li>
-                        <li><a href="#watermark" onclick="openTool('watermark'); return false;" class="hover:text-ink hover:underline">Watermark PDF</a></li>
-                        <li><a href="#office" onclick="openTool('office'); return false;" class="hover:text-ink hover:underline">Office Reader (.DOCX/.XLSX)</a></li>
-                    </ul>
-                </div>
-
-                <!-- Tools Gambar & OCR Col -->
-                <div>
-                    <h4 class="text-xs font-black uppercase tracking-wider text-ink mb-3.5">Tools Gambar & OCR</h4>
-                    <ul class="space-y-2 text-xs font-bold text-muted">
                         <li><a href="#pdf2img" onclick="openTool('pdf2img'); return false;" class="hover:text-ink hover:underline">PDF ke Gambar</a></li>
                         <li><a href="#img2pdf" onclick="openTool('img2pdf'); return false;" class="hover:text-ink hover:underline">Gambar ke PDF</a></li>
-                        <li><a href="#img-optimize" onclick="openTool('img-optimize'); return false;" class="hover:text-ink hover:underline">Resize & Kompres Gambar</a></li>
-                        <li><a href="#img-crop" onclick="openTool('img-crop'); return false;" class="hover:text-ink hover:underline">Crop & Putar Gambar</a></li>
+                        <li><a href="#organize" onclick="openTool('organize'); return false;" class="hover:text-ink hover:underline">Putar &amp; Hapus Halaman</a></li>
+                        <li><a href="#watermark" onclick="openTool('watermark'); return false;" class="hover:text-ink hover:underline">Watermark PDF</a></li>
+                        <li><a href="#office" onclick="openTool('office'); return false;" class="hover:text-ink hover:underline">Office Reader (.DOCX/.XLSX)</a></li>
+                        <li><a href="#img-optimize" onclick="openTool('img-optimize'); return false;" class="hover:text-ink hover:underline">Resize &amp; Kompres Gambar</a></li>
+                        <li><a href="#img-crop" onclick="openTool('img-crop'); return false;" class="hover:text-ink hover:underline">Crop &amp; Putar Gambar</a></li>
                         <li><a href="#img-upscale" onclick="openTool('img-upscale'); return false;" class="hover:text-ink hover:underline">Naikin Resolusi (HD 4x)</a></li>
-                        <li><a href="#ocr" onclick="openTool('ocr'); return false;" class="hover:text-ink hover:underline">OCR Ekstrak Teks</a></li>
+                        <li><a href="#ocr" onclick="openTool('ocr'); return false;" class="text-ink font-extrabold hover:underline">🔍 OCR Ekstrak Teks</a></li>
                     </ul>
                 </div>
 
-                <!-- Karya & Pintasan Col -->
+                <!-- Navigasi & Sosial Media Col -->
                 <div>
-                    <h4 class="text-xs font-black uppercase tracking-wider text-ink mb-3.5">Karya & Pintasan</h4>
-                    <ul class="space-y-2 text-xs font-bold text-muted">
-                        <li><a href="https://pixelcam-flame.vercel.app/" target="_blank" rel="noopener noreferrer" class="hover:text-ink hover:underline">📸 PixelCam Photobooth</a></li>
-                        <li><a href="https://nector-ui.vercel.app/" target="_blank" rel="noopener noreferrer" class="hover:text-ink hover:underline">🌐 Nector UI Template Web</a></li>
-                        <li><a href="https://pradipta-endra-maulana.vercel.app/" target="_blank" rel="noopener noreferrer" class="hover:text-ink hover:underline">💼 Portofolio Pradipta</a></li>
-                        <li><a href="https://github.com/PradiptaPPLG" target="_blank" rel="noopener noreferrer" class="hover:text-ink hover:underline">🐙 GitHub (@PradiptaPPLG)</a></li>
-                        <li><button type="button" onclick="openSettings()" class="hover:text-ink hover:underline cursor-pointer">🎨 Pengaturan Tema Warna</button></li>
+                    <h4 class="text-xs font-black text-ink mb-3.5">Navigasi</h4>
+                    <ul class="space-y-2 text-xs font-semibold text-muted">
+                        <li><a href="#tools-section" onclick="closeTool()" class="hover:text-ink hover:underline">Katalog 12 Tools</a></li>
+                        <li><a href="#cara-kerja" onclick="closeTool()" class="hover:text-ink hover:underline">Cara Kerjanya</a></li>
+                        <li><button type="button" onclick="openSettings()" class="hover:text-ink hover:underline cursor-pointer">Pengaturan Tema Warna</button></li>
+                        <li><a href="https://pixelcam-flame.vercel.app/" target="_blank" rel="noopener noreferrer" class="hover:text-ink hover:underline">PixelCam Photobooth ↗</a></li>
+                        <li><a href="https://nector-ui.vercel.app/" target="_blank" rel="noopener noreferrer" class="hover:text-ink hover:underline">Template Web (Nector UI) ↗</a></li>
+                        <li><a href="https://pradipta-endra-maulana.vercel.app/" target="_blank" rel="noopener noreferrer" class="hover:text-ink hover:underline">Portofolio (Pradipta) ↗</a></li>
+                        <li><a href="https://github.com/PradiptaPPLG" target="_blank" rel="noopener noreferrer" class="hover:text-ink hover:underline">GitHub (@PradiptaPPLG) ↗</a></li>
+                        <li><a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" class="hover:text-ink hover:underline">Kembali ke Atas ↑</a></li>
                     </ul>
+
+                    <div class="mt-5">
+                        <div class="text-xs font-black text-ink mb-2.5">Sosial Media</div>
+                        <div class="flex items-center gap-2.5">
+                            <a href="https://instagram.com/massdiipp" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="Instagram @massdiipp">
+                                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                </svg>
+                            </a>
+                            <a href="https://tiktok.com/@pradiptaendra" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="TikTok @pradiptaendra">
+                                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+                                </svg>
+                            </a>
+                            <a href="https://github.com/PradiptaPPLG" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="Profil GitHub PradiptaPPLG">
+                                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -820,7 +843,7 @@
                     Crafted with ✦ by <strong>Pradipta</strong> • SwiftDocs Open-Source Suite
                 </div>
                 <div class="text-[11px] font-semibold text-muted text-center sm:text-right">
-                    Engine: pdf-lib, PDF.js, JSZip, SheetJS, Mammoth.js & Tesseract.js
+                    Engine: pdf-lib, PDF.js, JSZip, SheetJS, Mammoth.js &amp; Tesseract.js
                 </div>
             </div>
         </div>
